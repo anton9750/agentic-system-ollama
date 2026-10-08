@@ -1,0 +1,11 @@
+{
+  "name": "tdd",
+  "description": "Test-driven development loop",
+  "nodes": [
+    {
+      "type": "skill",
+      "skill": "tdd",
+      "label": "TDD skill"
+    }
+  ]
+}

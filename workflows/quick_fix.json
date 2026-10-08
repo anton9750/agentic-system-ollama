@@ -1,0 +1,27 @@
+{
+  "name": "quick_fix",
+  "description": "Fast implement → light review cycle",
+  "nodes": [
+    {
+      "type": "agent",
+      "agent": "main",
+      "label": "Implement",
+      "instruction": "Implement the request completely using tools. Prefer write_file.",
+      "max_rounds": 10
+    },
+    {
+      "type": "agent",
+      "agent": "critic",
+      "label": "Quick review",
+      "instruction": "Quick correctness and quality check. Flag only serious issues.",
+      "max_rounds": 4
+    },
+    {
+      "type": "agent",
+      "agent": "main",
+      "label": "Fix",
+      "instruction": "Fix any serious issues found by the critic.",
+      "max_rounds": 6
+    }
+  ]
+}

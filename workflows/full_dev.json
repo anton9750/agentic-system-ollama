@@ -1,0 +1,55 @@
+{
+  "name": "full_dev",
+  "description": "Complete development pipeline: plan → research → implement → review → secure → test → polish",
+  "nodes": [
+    {
+      "type": "agent",
+      "agent": "architect",
+      "label": "Architecture",
+      "instruction": "Create a clear architecture plan and file layout for the user request.",
+      "max_rounds": 4
+    },
+    {
+      "type": "agent",
+      "agent": "researcher",
+      "label": "Research",
+      "instruction": "Survey the workspace and provide concrete implementation guidance based on the plan.",
+      "max_rounds": 5
+    },
+    {
+      "type": "agent",
+      "agent": "main",
+      "label": "Implement",
+      "instruction": "Implement the full solution using write_file. Complete, production-ready code only.",
+      "max_rounds": 12
+    },
+    {
+      "type": "agent",
+      "agent": "critic",
+      "label": "Review",
+      "instruction": "Review the implementation for correctness, edge cases and quality. Score 1-10.",
+      "max_rounds": 5
+    },
+    {
+      "type": "agent",
+      "agent": "security_auditor",
+      "label": "Security",
+      "instruction": "Security-audit the written code. List findings and required patches.",
+      "max_rounds": 5
+    },
+    {
+      "type": "agent",
+      "agent": "tester",
+      "label": "Tests",
+      "instruction": "Write and run tests for the solution. Create test files and execute them.",
+      "max_rounds": 8
+    },
+    {
+      "type": "agent",
+      "agent": "fusion",
+      "label": "Polish",
+      "instruction": "Produce the final polished, consistent solution. Fix any remaining issues.",
+      "max_rounds": 6
+    }
+  ]
+}

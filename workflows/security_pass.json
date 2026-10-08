@@ -1,0 +1,27 @@
+{
+  "name": "security_pass",
+  "description": "Focused security audit and hardening",
+  "nodes": [
+    {
+      "type": "agent",
+      "agent": "security_auditor",
+      "label": "Audit",
+      "instruction": "Perform a thorough security audit of the current codebase related to the request. Use tools to read files.",
+      "max_rounds": 8
+    },
+    {
+      "type": "agent",
+      "agent": "main",
+      "label": "Harden",
+      "instruction": "Apply all critical and high security fixes. Use write_file.",
+      "max_rounds": 8
+    },
+    {
+      "type": "agent",
+      "agent": "security_auditor",
+      "label": "Re-audit",
+      "instruction": "Re-check that the fixes resolved the issues.",
+      "max_rounds": 4
+    }
+  ]
+}

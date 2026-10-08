@@ -1,0 +1,12 @@
+{
+  "name": "Enterprise Full-Stack Pipeline",
+  "steps": [
+    {"skill": "research", "description": "Gather requirements and research best libraries/frameworks."},
+    {"skill": "architect", "description": "Design database schema and system architecture."},
+    {"skill": "tdd", "description": "Write failing test suites for components."},
+    {"skill": "implement", "description": "Implement core backend and frontend modules."},
+    {"skill": "optimize", "description": "Profile and optimize query performance and bottlenecks."},
+    {"skill": "security", "description": "Run vulnerability scans and static code analysis."},
+    {"skill": "dockerize", "description": "Create containerization and deployment configs."}
+  ]
+}
